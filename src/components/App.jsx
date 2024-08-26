@@ -1,18 +1,29 @@
 import React from "react";
+import Entry from "./Entry"; 
+import emojipedia from "../emojipedia";
+
+
+function CreateEntry(emojipedia){
+  return <Entry 
+    key = {emojipedia.id}
+    symbol = {emojipedia.emoji}
+    description = {emojipedia.name}
+    definition = {emojipedia.meaning}
+  />
+}
+
+
+
 
 function App() {
   return (
     <div>
-      <h1>
-        <span>emojipedia</span>
-      </h1>
+      <h1> <span>emojipedia</span> </h1>
 
       <dl className="dictionary">
         <div className="term">
           <dt>
-            <span className="emoji" role="img" aria-label="Tense Biceps">
-              💪
-            </span>
+            <span className="emoji" role="img" aria-label="Tense Biceps"> 💪 </span>
             <span>Tense Biceps</span>
           </dt>
           <dd>
